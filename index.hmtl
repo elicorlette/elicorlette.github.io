@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><b>Eli's Website<b></title>
+</head>
+<body>
+
+<h1>Hello Internet!</h1>
+<p>This is a WIP.</p>
+<script>alert('Random Javascript!');</script>
+</body>
+</html>

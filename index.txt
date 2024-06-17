@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127892680-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127892680-1');
+</script>
+
+<title>Eli's Website</title>
+</head>
+<body>
+
+<h1>Hello Internet!</h1>
+<p>This is a WIP.</p>
+<script>alert('Welcome!');</script>
+</body>
+</html>

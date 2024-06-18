@@ -8,10 +8,11 @@
 /* Global styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* Light text color */
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrollbar */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .container {
@@ -30,6 +31,7 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth header background color transition */
 }
 
 header h1 {
@@ -68,11 +70,11 @@ section h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
-    color: #333;
+    color: #fff; /* Light text color */
 }
 
 .about-section {
-    background-color: #fff;
+    background-color: #333; /* Dark background for about section */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);

@@ -178,3 +178,18 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Example styles for the login button */
+.login-btn {
+    background-color: #ffc107; /* Yellow background */
+    color: #333; /* Dark text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #fff; /* Light text color on hover */
+}

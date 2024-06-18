@@ -1,24 +1,24 @@
 <?php
-// Function to generate hashed password
-function generateHashedPassword($password) {
-    return password_hash($password, PASSWORD_DEFAULT);
-}
-
-// Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Handle form submission
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Hash the password
-    $hashedPassword = generateHashedPassword($password);
-
-    // Example: Save username and hashed password to a text file
+    // Example: Save to a text file (users.txt)
     $file = 'users.txt';
-    // Append new user data to file
-    file_put_contents($file, "$username:$hashedPassword\n", FILE_APPEND);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $data = "$username:$hashedPassword\n";
 
-    // Redirect to login page after successful registration
-    header('Location: login.html');
+    // Append to file
+    if (file_put_contents($file, $data, FILE_APPEND) !== false) {
+        header('Location: login.html'); // Redirect on successful registration
+        exit;
+    } else {
+        echo "Failed to register. Please try again later.";
+    }
+} else {
+    // Redirect if accessed directly without POST request
+    header('Location: register.html');
     exit;
 }
 ?>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Elijah Corlette</h1>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="infrastructure-section">
+        <div class="container">
+            <h2>Personal Website Infrastructure</h2>
+
+            <details open>
+                <summary><h3>Overview</h3></summary>
+                <p>This website is hosted on a cloud-based Linux VPS that I configured and manage myself. The goal of this project was to move away from static GitHub Pages hosting and build a self-managed hosting environment that provides greater flexibility, control, and opportunities to expand into dynamic web applications and backend services.</p>
+                <p>The project provided hands-on experience with Linux system administration, DNS management, web server configuration, SSL/TLS implementation, Git-based deployments, and cloud infrastructure management.</p>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Motivation</h3></summary>
+                <p>GitHub Pages was sufficient for serving static content but did not support server-side technologies such as PHP or future backend functionality. To gain greater control over the hosting environment and create a platform capable of supporting future projects, I migrated the website to a self-managed Linux VPS.</p>
+                <p>The objective was not only to host a personal website, but also to build and maintain the underlying infrastructure myself.</p>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Architecture</h3></summary>
+                <p>Architecture overview diagram:</p>
+                <div class="diagram-wrap">
+                    <img src="assets/architecture-diagram.svg" alt="Infrastructure diagram" />
+                </div>
+                <pre class="architecture">Visitor
+↓
+Cloudflare DNS/CDN
+↓
+Hetzner Cloud VPS
+↓
+Ubuntu Linux
+↓
+Nginx Web Server
+↓
+PHP-FPM
+↓
+Website Content</pre>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Technologies Used</h3></summary>
+                <ul>
+                    <li>Cloudflare DNS and Proxy Services</li>
+                    <li>Hetzner Cloud VPS</li>
+                    <li>Ubuntu Linux</li>
+                    <li>Nginx Web Server</li>
+                    <li>PHP-FPM</li>
+                    <li>Let's Encrypt SSL/TLS Certificates</li>
+                    <li>Git and GitHub Source Control</li>
+                    <li>SSH Key Authentication</li>
+                    <li>UFW Firewall</li>
+                </ul>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Security</h3></summary>
+                <ul>
+                    <li>HTTPS enabled using Cloudflare Full (Strict) SSL</li>
+                    <li>SSH key-based authentication for server access</li>
+                    <li>Restricted root account access</li>
+                    <li>UFW firewall configured to allow only required services</li>
+                    <li>Public website separated from future administrative functionality</li>
+                    <li>Automatic SSL certificate renewal</li>
+                </ul>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Deployment Workflow</h3></summary>
+                <pre class="architecture">Development Workstation
+↓
+Git Commit
+↓
+GitHub Repository
+↓
+Production VPS
+↓
+Live Website</pre>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Challenges</h3></summary>
+                <ul>
+                    <li>Migrating DNS management from Squarespace/Google Domains to Cloudflare</li>
+                    <li>Configuring Nginx virtual hosts and site routing</li>
+                    <li>Troubleshooting PHP-FPM integration and version compatibility</li>
+                    <li>Resolving SSL/TLS configuration issues between Cloudflare and the VPS</li>
+                    <li>Implementing HTTPS using Let's Encrypt certificates</li>
+                    <li>Deploying website content from GitHub to a production Linux server</li>
+                    <li>Configuring secure remote administration using SSH keys</li>
+                </ul>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Results</h3></summary>
+                <p>The project successfully achieved its objectives and provided practical experience with modern web infrastructure technologies.</p>
+                <p><strong>Key outcomes include:</strong></p>
+                <ul>
+                    <li>Successfully migrated from GitHub Pages to a self-hosted Linux VPS</li>
+                    <li>Implemented end-to-end HTTPS encryption</li>
+                    <li>Established a repeatable Git-based deployment workflow</li>
+                    <li>Created a platform capable of supporting future dynamic web applications</li>
+                    <li>Gained practical experience with Linux administration, DNS, web servers, SSL/TLS, and cloud infrastructure</li>
+                </ul>
+            </details>
+
+            <hr>
+
+            <details>
+                <summary><h3>Future Improvements</h3></summary>
+                <ul>
+                    <li>Secure administrative dashboard</li>
+                    <li>File and project management system</li>
+                    <li>Automated deployment pipeline</li>
+                    <li>Monitoring and logging solutions</li>
+                    <li>Database-backed project management</li>
+                    <li>Infrastructure documentation and network diagrams</li>
+                    <li>Additional hosted services and development projects</li>
+                </ul>
+            </details>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Elijah Corlette. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

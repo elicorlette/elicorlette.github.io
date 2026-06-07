@@ -107,18 +107,40 @@ section h2 {
     transition: transform 0.3s ease;
 }
 
-.interest:hover {
-    transform: translateY(-5px); /* Lift on hover */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
 
-.interest h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
+    .project {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 24px;
+        border-radius: 10px;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
 
-.interest p {
+    .project:hover,
+    .project:focus-visible {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        background-color: #3a3a3a;
+    }
+
+    .project h3 {
+        margin-bottom: 10px;
+        color: #ffc107;
+    }
+
+    .project p {
+        color: #ddd;
+        line-height: 1.5;
+    }
     font-size: 1.1rem;
     color: #666;
 }
@@ -148,6 +170,40 @@ section h2 {
     color: #fff; /* White color on hover */
 }
 
+/* Simple contact list styling used on contact.html */
+.contact-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.contact-list li {
+    margin: 8px 0;
+    font-size: 1.05rem;
+    color: #ddd;
+}
+
+.contact-list a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: #ffd54a;
+    text-decoration: underline;
+}
+
+/* Inline SVG icon styling for contact list */
+.contact-list svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+    fill: currentColor;
+}
+
+.contact-list li a { display: inline-flex; align-items: center; }
+
 /* Footer styles */
 footer {
     background-color: #222;
@@ -158,6 +214,185 @@ footer {
 
 footer p {
     font-size: 1rem;
+}
+
+/* Infrastructure section styles */
+.infrastructure-section {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.12);
+    color: #ddd;
+    margin-top: 30px;
+}
+
+.infrastructure-section h2 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.infrastructure-section h3 {
+    color: #ffc107;
+    margin-top: 18px;
+}
+
+.infrastructure-section .architecture {
+    background: #1f1f1f;
+    color: #e6e6e6;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    border-left: 4px solid #ffc107;
+}
+
+.infrastructure-section hr {
+    border: 0;
+    height: 1px;
+    background: #3b3b3b;
+    margin: 20px 0;
+}
+
+/* Details/summary collapsible styles */
+details {
+    background: transparent;
+    padding: 10px 0;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+summary h3 {
+    display: inline-block;
+    margin: 0;
+}
+
+summary::-webkit-details-marker { display:none; }
+
+summary:after {
+    content: '\25BE';
+    float: right;
+    transition: transform 0.2s ease;
+    color: #ffc107;
+}
+
+details[open] summary:after {
+    transform: rotate(180deg);
+}
+
+.diagram-wrap {
+    margin: 12px 0 10px;
+    text-align: center;
+}
+
+.diagram-wrap img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Minor visual tweaks for collapsible sections */
+details {
+    transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    border-radius: 8px;
+}
+
+details[open] {
+    background-color: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.24);
+    transform: translateY(-2px);
+}
+
+summary {
+    padding: 6px 2px;
+}
+
+summary h3 { font-size: 1.12rem; display:inline-block; }
+
+/* slightly reduce hr contrast inside infrastructure to keep it subtle */
+.infrastructure-section hr { background: #313131; }
+
+.resume-section {
+    background-color: #272727;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.resume-header {
+    color: #ddd;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.resume-header a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.resume-summary {
+    margin-bottom: 18px;
+    color: #ddd;
+}
+
+.resume-download {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 10px 18px;
+    background-color: #ffc107;
+    color: #111;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-download:hover {
+    background-color: #e0a800;
+}
+
+.resume-card h3 {
+    margin-top: 24px;
+    color: #fff;
+}
+
+.resume-card h4 {
+    margin-top: 18px;
+    color: #ffc107;
+}
+
+.resume-card p,
+.resume-card li {
+    color: #ddd;
+}
+
+.resume-card ul {
+    margin-top: 10px;
+    margin-left: 1.25rem;
+}
+
+.resume-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.resume-list-inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resume-list-inline li {
+    margin-bottom: 0.75rem;
+}
+
+.small-text {
+    color: #bbb;
+    font-size: 0.95rem;
 }
 
 /* Responsive design */

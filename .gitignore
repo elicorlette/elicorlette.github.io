@@ -1,0 +1,4 @@
+# Ignore everything in the files/ folder except the README (which explains usage)
+files/*
+!files/README.md
+!files/Elijah_Corlette_Resume.pdf

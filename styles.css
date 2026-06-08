@@ -175,18 +175,31 @@ nav {
         font-size: 0.95rem;
     }
 
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 10px 10px;
+        width: 100%;
+    }
+
     .navbar a {
         font-size: 0.95rem;
-        padding: 10px 12px;
+        padding: 10px 10px;
+        width: 100%;
+        text-align: center;
+        min-width: 0;
+        white-space: normal;
     }
 
     .header-right {
         gap: 10px;
+        align-items: stretch;
     }
 
     .login-btn {
         width: 100%;
-        max-width: 260px;
+        max-width: none;
     }
 }
 

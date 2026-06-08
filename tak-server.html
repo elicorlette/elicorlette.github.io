@@ -134,14 +134,10 @@
         const header = document.querySelector('header');
         window.addEventListener('scroll', function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            if (currentScroll > 100) {
-                if (currentScroll > lastScrollTop) {
-                    header.classList.add('hidden');
-                } else {
-                    header.classList.remove('hidden');
-                }
-            } else {
+            if (currentScroll <= 80) {
                 header.classList.remove('hidden');
+            } else {
+                header.classList.add('hidden');
             }
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         });

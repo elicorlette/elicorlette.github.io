@@ -6,26 +6,107 @@
     <title>TAK Server</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="project-page">
     <header>
         <div class="container">
-            <h1>Elijah Corlette</h1>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="infrastructure.html">Infrastructure</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="site-branding">
+                <h1>Elijah Corlette</h1>
+                <p class="site-tagline">Network Administration | Systems Infrastructure | Communications Technology</p>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <section>
+    <section class="project-page">
         <div class="container">
-            <h2>TAK Server</h2>
-            <p>This page covers TAK server deployment, Openfire notes, and sanitized operational details. Add notes on server setup, configuration, and lessons learned.</p>
+            <h2>TAK Server &amp; OpenFire Administration</h2>
+            <span class="project-badge">Ongoing Experience</span>
+            <p class="project-meta"><strong>Category:</strong> Systems Administration</p>
+            <p class="project-meta"><strong>Technologies:</strong> TAK Server, OpenFire XMPP, Debian Linux, VMware ESXi, WinTAK, PKI, SSL/TLS</p>
+            <p class="project-meta"><strong>Skills Demonstrated:</strong> Linux Administration, Virtualization, Authentication, PKI, Troubleshooting, Collaboration Systems</p>
+            <p class="project-meta"><strong>Status:</strong> Ongoing Experience</p>
+
+            <div class="project-diagram">
+                <span class="diagram-step">Debian Linux</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">TAK Server</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">OpenFire XMPP</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">WinTAK / Clients</span>
+            </div>
+
+            <div class="project-section">
+                <h3>Project Summary</h3>
+                <p>This project involved deploying, configuring, and administering TAK Server and OpenFire environments that support real-time collaboration, user authentication, and situational awareness capabilities.</p>
+                <p>Responsibilities included server configuration, certificate management, user administration, service integration, and troubleshooting.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>Overview</h3>
+                <p>Deployed, configured, and administered TAK Server and OpenFire environments supporting real-time collaboration, user authentication, and situational awareness capabilities. Responsibilities included server configuration, certificate management, user administration, service integration, and troubleshooting.</p>
+                <p>This project provided hands-on experience with Linux server administration, virtualization, Public Key Infrastructure (PKI), authentication systems, and enterprise collaboration services.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>Responsibilities &amp; Accomplishments</h3>
+                <ul>
+                    <li>Installed and configured TAK Server services.</li>
+                    <li>Managed user accounts, authentication, and permissions.</li>
+                    <li>Installed and configured OpenFire XMPP services.</li>
+                    <li>Created and administered groups, services, and chat rooms.</li>
+                    <li>Integrated OpenFire with TAK Chat functionality.</li>
+                    <li>Managed certificates and authentication infrastructure.</li>
+                    <li>Troubleshot client connectivity and service issues.</li>
+                    <li>Configured metrics and monitoring access.</li>
+                    <li>Performed server migrations, upgrades, and reconfiguration.</li>
+                    <li>Administered virtualized server environments using VMware ESXi.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Challenges</h3>
+                <ul>
+                    <li>Certificate management and PKI configuration.</li>
+                    <li>Domain migration and service reconfiguration.</li>
+                    <li>User permission and role troubleshooting.</li>
+                    <li>TAK Client connectivity issues.</li>
+                    <li>OpenFire integration and XMPP configuration.</li>
+                    <li>Metrics and monitoring configuration.</li>
+                    <li>Web interface accessibility issues.</li>
+                    <li>Virtual machine deployment and maintenance.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Lessons Learned</h3>
+                <ul>
+                    <li>Linux server administration.</li>
+                    <li>Public Key Infrastructure (PKI).</li>
+                    <li>Certificate lifecycle management.</li>
+                    <li>Authentication and access control.</li>
+                    <li>XMPP collaboration systems.</li>
+                    <li>Virtualized infrastructure management.</li>
+                    <li>Structured troubleshooting methodologies.</li>
+                    <li>Enterprise communication system administration.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Results</h3>
+                <p>Successfully deployed and administered TAK Server and OpenFire environments supporting user authentication, collaboration services, chat functionality, and operational information sharing.</p>
+                <p>Gained practical experience with Linux administration, virtualization, PKI, and enterprise-style communication services while improving troubleshooting and system administration skills.</p>
+            </div>
         </div>
     </section>
 
@@ -34,5 +115,36 @@
             <p>&copy; 2024 Eli Corlette. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUrl = window.location.href;
+            const filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1) || 'index.html';
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkUrl = new URL(href, window.location.href).href;
+                if (linkUrl === currentUrl || (filename === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+            console.log('Current file:', filename, 'Current URL:', currentUrl);
+        });
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > 100) {
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+            } else {
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
 </body>
 </html>

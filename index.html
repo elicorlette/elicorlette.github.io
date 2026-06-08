@@ -6,38 +6,83 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home">
     <header>
         <div class="container">
-            <h1>Elijah Corlette</h1>
-            <nav>
-                <ul class="navbar">
+            <div class="site-branding">
+                <h1>Elijah Corlette</h1>
+                <p class="site-tagline">Network Administration | Systems Infrastructure | Communications Technology</p>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="navbar">
                     <li><a href="resume.html">Resume</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="infrastructure.html">Infrastructure</a></li>
                     <li><a href="contact.html">Contact</a></li>
-					<!-- Add a Login button -->
-                    <li><a href="login.html" class="login-btn">Login</a></li>
-                </ul>
+	                </ul>
             </nav>
+            <a href="login.html" class="login-btn">Login</a>
+            </div>
         </div>
     </header>
 
-    <section>
+    <section class="landing-hero">
         <div class="container">
-            <h2>Elijah Corlette</h2>
-            <li>Marine Corps Network Administrator</li>
-            <h4>Experience with:</h4>
-                        <ul>
-                            <li>Cisco Networking</li>
-                            <li>Linux</li>
-                            <li>Cloud Infrastructure</li>
-                            <li>Satellite Communications</li>
-                            <li>TAK/Openfire</li>
-                            <li>Pacstar/Expeditionary Tactical Communications</li>
-                            <li>Cloudflare</li>
-                            <li>Web Infrastructure</li>
-                        </ul>
+            <div class="hero-card">
+                <h1 class="hero-title">Technical Projects &amp; Infrastructure Portfolio</h1>
+                <p class="hero-subtitle">Active-duty Marine Corps communications professional with experience in network administration, Linux systems, cloud infrastructure, enterprise collaboration technologies, and tactical communications support.</p>
+                <p class="hero-lead">This website serves as a portfolio of projects, technical documentation, and hands-on experience involving networking, systems administration, infrastructure deployment, and operational technology.</p>
+                <div class="hero-ctas">
+                    <a class="cta-btn" href="projects.html">View Projects</a>
+                    <a class="cta-btn ghost" href="resume.html">View Resume</a>
+                    <a class="cta-btn ghost" href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="focus-section">
+                <h2>Core Focus Areas</h2>
+                <div class="focus-grid">
+                    <div class="focus">
+                        <h3>Networking</h3>
+                        <p>Supporting and troubleshooting routed and switched networks, transport systems, Cisco equipment, and communications infrastructure.</p>
+                    </div>
+                    <div class="focus">
+                        <h3>Systems Infrastructure</h3>
+                        <p>Deploying and administering Linux servers, cloud-hosted environments, DNS, SSL/TLS, and secure remote administration.</p>
+                    </div>
+                    <div class="focus">
+                        <h3>Collaboration &amp; Communication Systems</h3>
+                        <p>Administering TAK Server, OpenFire XMPP, authentication systems, certificates, and collaboration services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <h2>Featured Projects</h2>
+                <div class="project-cards">
+                    <article class="project-card">
+                        <h3>Personal Website Infrastructure</h3>
+                        <p>Designed, deployed, and maintain a cloud-hosted Linux VPS environment utilizing Cloudflare, Ubuntu, Nginx, PHP-FPM, SSL/TLS, GitHub, and automated deployment workflows.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>TAK Server &amp; OpenFire Administration</h3>
+                        <p>Configured and administered TAK Server and OpenFire environments supporting authentication, collaboration services, user management, certificates, and communication platforms.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="goals-section">
+                <h2>Current Goals</h2>
+                <ul class="goals-list">
+                    <li>Expand project portfolio and technical documentation</li>
+                    <li>Build a portable networking homelab</li>
+                    <li>Continue developing Linux and infrastructure skills</li>
+                    <li>Pursue industry certifications and professional development</li>
+                    <li>Explore automation and monitoring solutions</li>
+                </ul>
+                <p class="thankyou">Thank you for visiting. Feel free to review my projects, resume, and contact information.</p>
+            </div>
         </div>
     </section>
 
@@ -46,5 +91,36 @@
             <p>&copy; 2024 Elijah Corlette. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUrl = window.location.href;
+            const filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1) || 'index.html';
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkUrl = new URL(href, window.location.href).href;
+                if (linkUrl === currentUrl || (filename === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+            console.log('Current file:', filename, 'Current URL:', currentUrl);
+        });
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > 100) {
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+            } else {
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
 </body>
 </html>

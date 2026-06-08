@@ -26,8 +26,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <nav>
                 <ul class="navbar">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="logout.php">Logout</a></li> <!-- Logout button -->
                 </ul>

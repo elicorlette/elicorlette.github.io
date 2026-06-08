@@ -6,40 +6,114 @@
     <title>Personal Infrastructure</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="project-page">
     <header>
         <div class="container">
-            <h1>Elijah Corlette</h1>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="infrastructure.html">Infrastructure</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="site-branding">
+                <h1>Elijah Corlette</h1>
+                <p class="site-tagline">Network Administration | Systems Infrastructure | Communications Technology</p>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <section>
+    <section class="project-page">
         <div class="container">
-            <h2>Personal Infrastructure</h2>
-            <p>This page covers my creation of this personal portfolio website, including the design, development, and deployment processes.</p>
-            <ul>
-                            <li>Domain migrated to CloudFlare</li>
-                            <li>Hetzner VPS deployed</li>
-                            <li>Ubuntu server configured</li>
-                            <li>Nginx web server installed and configured</li>
-                            <li>PHP-FPM support added</li>
-                            <li>SSL/TLS with Full Strict CloudFlare mode</li>
-                            <li>SSH key-based authentication configured</li>
-                            <li>UFW Firewall</li>
-                            <li>Github-based deployment</li>
-                            <li>Automated backups and monitoring</li>
-                            <li>Performance optimizations and security hardening</li>
-                            <li>Continuing maintenance and improvements</li>
-                        </ul>
+            <h2>Personal Website Infrastructure</h2>
+            <span class="project-badge">Active / Ongoing Development</span>
+            <p class="project-meta"><strong>Category:</strong> Systems Administration / Web Infrastructure</p>
+            <p class="project-meta"><strong>Technologies:</strong> Cloudflare, Hetzner Cloud VPS, Ubuntu Linux, Nginx, PHP-FPM, GitHub, Git, SSL/TLS, SSH, UFW</p>
+            <p class="project-meta"><strong>Skills Demonstrated:</strong> Linux Administration, DNS Management, Web Hosting, Cloud Infrastructure, SSL/TLS, Git-Based Deployment, Troubleshooting</p>
+            <p class="project-meta"><strong>Status:</strong> Active / Ongoing Development</p>
+
+            <div class="project-diagram">
+                <span class="diagram-step">Cloudflare DNS/CDN</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">Hetzner Cloud VPS</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">Ubuntu Linux</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">Nginx + PHP-FPM</span>
+                <span class="diagram-arrow">→</span>
+                <span class="diagram-step">Website</span>
+            </div>
+
+            <div class="project-section">
+                <h3>Project Summary</h3>
+                <p>This project documents the design, deployment, and ongoing administration of my personal portfolio website. The objective was to move away from static GitHub Pages hosting and create a self-managed hosting environment capable of supporting dynamic web applications, future backend services, and long-term infrastructure growth.</p>
+                <p>The project provided practical experience with Linux server administration, DNS management, web server configuration, SSL/TLS implementation, Git-based deployments, and cloud infrastructure management.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>Overview</h3>
+                <p>This project documents the design, deployment, and ongoing administration of my personal portfolio website. The objective was to move away from static GitHub Pages hosting and create a self-managed hosting environment capable of supporting dynamic web applications, future backend services, and long-term infrastructure growth.</p>
+                <p>The project provided practical experience with Linux server administration, DNS management, web server configuration, SSL/TLS implementation, Git-based deployments, and cloud infrastructure management.</p>
+            </div>
+
+            <div class="project-section">
+                <h3>Responsibilities &amp; Accomplishments</h3>
+                <ul>
+                    <li>Migrated domain management to Cloudflare.</li>
+                    <li>Deployed and configured a Hetzner Cloud VPS.</li>
+                    <li>Installed and configured Ubuntu Server.</li>
+                    <li>Installed and configured Nginx web server.</li>
+                    <li>Configured PHP-FPM support for dynamic content.</li>
+                    <li>Implemented HTTPS using SSL/TLS certificates.</li>
+                    <li>Configured Cloudflare Full (Strict) SSL mode.</li>
+                    <li>Implemented SSH key-based authentication.</li>
+                    <li>Configured UFW firewall policies.</li>
+                    <li>Established GitHub-based deployment workflow.</li>
+                    <li>Implemented automated backups and monitoring.</li>
+                    <li>Performed performance optimization and security hardening.</li>
+                    <li>Continue maintaining and expanding the platform.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Challenges</h3>
+                <ul>
+                    <li>Migrating DNS management between providers.</li>
+                    <li>Configuring Cloudflare proxy and SSL/TLS settings.</li>
+                    <li>Troubleshooting certificate and HTTPS issues.</li>
+                    <li>Configuring Nginx virtual hosts and routing.</li>
+                    <li>Integrating PHP-FPM with Nginx.</li>
+                    <li>Implementing secure remote administration using SSH keys.</li>
+                    <li>Managing Linux file permissions and ownership.</li>
+                    <li>Establishing a repeatable Git-based deployment process.</li>
+                    <li>Resolving browser and CDN caching issues.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Lessons Learned</h3>
+                <ul>
+                    <li>Linux system administration.</li>
+                    <li>DNS management and troubleshooting.</li>
+                    <li>Cloud-hosted infrastructure deployment.</li>
+                    <li>Web server configuration and management.</li>
+                    <li>SSL/TLS implementation and certificate management.</li>
+                    <li>Git and source control workflows.</li>
+                    <li>Secure remote administration practices.</li>
+                    <li>Structured troubleshooting methodologies.</li>
+                    <li>Infrastructure hardening and maintenance.</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3>Results</h3>
+                <p>Successfully migrated from static GitHub Pages hosting to a self-managed Linux VPS environment capable of supporting dynamic web applications and future infrastructure growth.</p>
+                <p>Established a secure, scalable, and maintainable platform while gaining practical experience with Linux administration, cloud infrastructure, web hosting, DNS, SSL/TLS, and deployment workflows.</p>
+            </div>
         </div>
     </section>
 
@@ -48,5 +122,36 @@
             <p>&copy; 2024 Elijah Corlette. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUrl = window.location.href;
+            const filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1) || 'index.html';
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkUrl = new URL(href, window.location.href).href;
+                if (linkUrl === currentUrl || (filename === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+            console.log('Current file:', filename, 'Current URL:', currentUrl);
+        });
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > 100) {
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+            } else {
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
 </body>
 </html>

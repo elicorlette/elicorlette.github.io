@@ -9,15 +9,20 @@
 <body>
     <header>
         <div class="container">
-            <h1>Elijah Corlette</h1>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="infrastructure.html">Infrastructure</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="site-branding">
+                <h1>Elijah Corlette</h1>
+                <p class="site-tagline">Network Administration | Systems Infrastructure | Communications Technology</p>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -142,5 +147,36 @@
             <p>&copy; 2024 Elijah Corlette. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUrl = window.location.href;
+            const filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1) || 'index.html';
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkUrl = new URL(href, window.location.href).href;
+                if (linkUrl === currentUrl || (filename === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+            console.log('Current file:', filename, 'Current URL:', currentUrl);
+        });
+
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > 100) {
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+            } else {
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
 </body>
 </html>
